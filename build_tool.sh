@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#Author : zahi0 @ github
-#Date : 20220113
-#Description : 内核编译脚本，这个脚本可以在github action和自己的pc都可以使用
+#Author : donVito007
+#Date : 20230526
+#Description : 
 
 clang_path="${PWD}/proton-clang/bin"
 gcc_path="${clang_path}/aarch64-linux-gnu-"
@@ -46,8 +46,8 @@ clean(){
 
 
 build_kernel(){
-	export KBUILD_BUILD_USER="zahi0"  
-	export KBUILD_BUILD_HOST="zahi0-server"  
+	export KBUILD_BUILD_USER="donVito007"  
+	export KBUILD_BUILD_HOST="vitoCloudServer-02"  
 	make $args wayne_defconfig #修改配置文件
 	if [ $? -ne 0 ]; then
       		exit 0
